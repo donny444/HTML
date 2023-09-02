@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>XHR log time</title>
+    <style></style>
+  </head>
+  <body>
+    <p id="writeData" class="data">Off-Line</p>
+    <p id="lastStamp">No Data yet</p>
+
+    <script>
+      const fullData = document.getElementById("writeData");
+      const lastData = document.getElementById("lastStamp");
+
+      function fetchData() {
+        console.log("Fetching updated data.");
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "time-log.txt", true);
+        xhr.onload = () => {
+          updateDisplay(xhr.response);
+        };
+        xhr.send();
+      }
+
+      function updateDisplay(text) {
+        fullData.textContent = text;
+
+        const timeArray = text.split("\n");
+
+        // included because some file systems always include a blank line at the end of text files.
+        if (timeArray[timeArray.length - 1] === "") {
+          timeArray.pop();
+        }
+
+        lastData.textContent = timeArray[timeArray.length - 1];
+      }
+
+      setInterval(fetchData, 5000);
+    </script>
+  </body>
+</html>
