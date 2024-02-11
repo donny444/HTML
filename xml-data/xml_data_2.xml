@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- These are basic terminal commands -->
+<command>
+    <type>cd</type>
+    <definition>Move around your directory structure</definition>
+</command>
+
+<command>
+    <type>mkdir</type>
+    <definition>Create directories</definition>
+</command>
+
+<command>
+    <type>touch</type>
+    <definition>Create files (and modify their metadata)</definition>
+</command>
+
+<command>
+    <type>cp</type>
+    <definition>Copy files</definition>
+</command>
+
+<command>
+    <type>mv</type>
+    <definition>Move files</definition>
+</command>
+
+<command>
+    <type>rm</type>
+    <definition>Delete files or directories</definition>
+</command>
+
+<command>
+    <type>curl</type>
+    <definition>Download files found at specific URLs</definition>
+</command>
+
+<command>
+    <type>grep</type>
+    <definition>Search for fragment of text inside larger bodies of text</definition>
+</command>
+
+<command>
+    <type>less, cat</type>
+    <definition>View a file&apos;s contents page by page</definition>
+</command>
+
+<command>
+    <type>awk, tr, sed</type>
+    <definition>Manipulate and transform streams of text (for example changing all the instances of &lt;div&gt;&apos;s in an HTML file to &lt;article&gt;)</definition>
+</command>
+
+<source>https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line</source>

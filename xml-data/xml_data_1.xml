@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- These are basic docker commands -->
+<command>
+    <type>docker build -t &lt;image_name&gt;</type>
+    <definition>Build an image from a Dockerfile</definition>
+</command>
+
+<command>
+    <type>docker run --name &lt;container_name&gt; &lt;image_name&gt;</type>
+    <definition>Create and run a container from an image with a custom name</definition>
+</command>
+
+<command>
+    <type>docker rm &lt;container_name&gt;</type>
+    <definition>Remove a stopped container</definition>
+</command>
+
+<command>
+    <type>docker ps -all</type>
+    <definition>List all docker containers (running and stopped)</definition>
+</command>
